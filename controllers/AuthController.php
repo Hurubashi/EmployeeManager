@@ -1,8 +1,6 @@
 <?php
 
-
 namespace app\controllers;
-
 
 use app\models\LoginForm;
 use app\models\SingupForm;
@@ -25,6 +23,7 @@ class AuthController extends Controller
         }
 
         $model = new LoginForm();
+
         if ($model->load(Yii::$app->request->post()) && $model->login()) {
             return $this->goBack();
         }
@@ -63,13 +62,4 @@ class AuthController extends Controller
     	return $this->render('signup', ['model' => $model]);
     }
 
-    public function actionTest()
-    {
-        if (Yii::$app->user->isGuest) {
-        	echo "Guest";
-        } else {
-        	print_r(Yii::$app->user);
-        	echo "Real User D";
-        }
-    }
 }

@@ -2,7 +2,6 @@
 
 namespace app\controllers;
 
-use app\models\Task;
 use app\models\TaskSearch;
 use Yii;
 use app\models\Employee;
@@ -10,7 +9,6 @@ use app\models\EmployeeSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
-use yii\data\ActiveDataProvider;
 
 /**
  * EmployeeController implements the CRUD actions for Employee model.

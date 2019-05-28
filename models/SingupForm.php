@@ -4,6 +4,7 @@
 namespace app\models;
 
 
+use Yii;
 use yii\base\Model;
 
 class SingupForm extends Model
@@ -38,6 +39,8 @@ class SingupForm extends Model
 		{
 			$user = new User();
 			$user->attributes = $this->attributes;
+			$hash = Yii::$app->getSecurity()->generatePasswordHash($user->password);
+			$user->password = $hash;
 			return $user->create();
 		}
 	}
