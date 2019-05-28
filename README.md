@@ -1,4 +1,4 @@
-<h1 align="center">Employee Manager Project</h1>
+<h1 align="center">Employee Manager</h1>
 
 <p align="center">
     <a href="https://github.com/yiisoft" target="_blank">
